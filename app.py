@@ -28,7 +28,9 @@ def help(update, context):
 
 def echo(update, context):
     """Echo the user message."""
-    update.message.reply_text(update.message.text)
+    u = update.message.text
+    u = u.upper()
+    update.message.reply_text(u)
 
 def error(update, context):
     """Log Errors caused by Updates."""
